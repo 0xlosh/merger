@@ -6,6 +6,8 @@ if [ $# -eq 0 ]; then
     exit 1
 fi
 
+yarn build 
+
 # Store the fee rate argument
 fee_rate=$1
 
@@ -28,7 +30,7 @@ while true; do
     fi
     
     echo "Waiting for 10 seconds before next execution..."
-    sleep 10
+    sleep 60
 done
 
 echo "Script execution completed."

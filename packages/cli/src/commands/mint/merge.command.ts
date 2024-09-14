@@ -98,9 +98,11 @@ export class MergeCommand extends BoardcastCommand {
     );
 
     console.log("contracts left: " + res.contracts.length);
+    //console.log(JSON.stringify(res, null, 2));
+
     if (res.contracts.length <= 1) {
         console.log("MERGING DONE")
-        return
+        return 
     }
 
     if (res !== null) {
