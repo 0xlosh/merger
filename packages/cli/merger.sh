@@ -29,8 +29,8 @@ while true; do
         break
     fi
     
-    echo "Waiting for 10 seconds before next execution..."
-    sleep 60
+    echo "Waiting for 30 seconds before next execution..."
+    sleep 30
 done
 
 echo "Script execution completed."
