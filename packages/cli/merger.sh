@@ -17,11 +17,9 @@ run_merge_command() {
 # Main loop
 while true; do
     echo "Running merge command..."
-    # Run the command and capture its output
-    output=$(run_merge_command)
     
-    # Print the output
-    echo "$output"
+    # Run the command and display output in real-time while also capturing it
+    output=$(run_merge_command | tee >(cat - >&2))
     
     # Check if the output contains the success message
     if echo "$output" | grep -q "Done merging tokens!"; then
