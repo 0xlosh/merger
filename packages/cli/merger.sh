@@ -22,7 +22,7 @@ while true; do
     output=$(run_merge_command | tee >(cat - >&2))
     
     # Check if the output contains the success message
-    if echo "$output" | grep -q "Done merging tokens!"; then
+    if echo "$output" | grep -q "MERGING DONE"; then
         echo "Success message found. Stopping the loop."
         break
     fi
